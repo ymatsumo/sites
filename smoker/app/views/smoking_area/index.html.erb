@@ -1,0 +1,23 @@
+<h1>喫煙所一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>喫煙所名</th>
+      <th>住所</th>
+      <th>緯度</th>
+      <th>経度</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @smoking_areas.each do |smoking_area| %>
+      <tr>
+        <td><%= smoking_area.name %></td>
+        <td><%= smoking_area.address%></td>
+        <td><%= smoking_area.latitude %></td>
+        <td><%= smoking_area.longitude %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
