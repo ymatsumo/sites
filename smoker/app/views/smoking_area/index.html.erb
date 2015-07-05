@@ -1,6 +1,5 @@
 <h1>喫煙所一覧</h1>
-
-<table>
+<table class="table table-striped table-hover ">
   <thead>
     <tr>
       <th>喫煙所名</th>
@@ -12,12 +11,12 @@
 
   <tbody>
     <% @smoking_areas.each do |smoking_area| %>
-      <tr>
-        <td><%= smoking_area.name %></td>
-        <td><%= smoking_area.address%></td>
-        <td><%= smoking_area.latitude %></td>
-        <td><%= smoking_area.longitude %></td>
-      </tr>
+    <tr>
+      <td><%= smoking_area.name %></td>
+      <td><%= smoking_area.address%></td>
+      <td><%= smoking_area.latitude %></td>
+      <td><%= smoking_area.longitude %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
