@@ -1,0 +1,49 @@
+<h2>喫煙所登録</h2>
+
+<% if @smoking_area.errors.any? %>
+  <div class="alert alert-dismissible alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <ul>
+      <% @smoking_area.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="well bs-component">
+  <%= form_for @smoking_area, :url => {action: "create"}, :html => {class: "form-horizontal"} do |f| %>
+    <fieldset>
+      <div class="form-group">
+        <%= f.label :name, "喫煙所名", :class => "col-lg-2 control-label" %>
+        <div class="col-lg-10">
+          <%= f.text_field :name, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :address, "住所", :class => "col-lg-2 control-label" %>
+        <div class="col-lg-10">
+          <%= f.text_field :address, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :latitude, "緯度", :class => "col-lg-2 control-label" %>
+        <div class="col-lg-10">
+          <%= f.text_field :latitude, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :longitude, "緯度", :class => "col-lg-2 control-label" %>
+        <div class="col-lg-10">
+          <%= f.text_field :longitude, :class => "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <%= f.button "リセット", :type => "reset", :class => "btn btn-default" %>
+          <%= f.submit "登録", :class => "btn btn-primary" %>
+        </div>
+      </div>
+    </fieldset>
+  <% end %>
+</div>

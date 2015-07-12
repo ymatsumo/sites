@@ -9,4 +9,23 @@ class SmokingAreaController < ApplicationController
       marker.json({title: smoking_area.name})
     end
   end
+
+  def new
+    @smoking_area = SmokingArea.new
+  end
+
+  def create
+    @smoking_area = SmokingArea.new(smoking_area_params)
+
+    if @smoking_area.save
+      redirect_to :action => 'index'
+    else
+      render 'new'
+    end
+  end
+
+  private
+  def smoking_area_params
+    params.require(:smoking_area).permit(:name, :address, :latitude, :longitude)
+  end
 end
