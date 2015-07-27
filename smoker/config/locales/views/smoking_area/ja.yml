@@ -1,0 +1,8 @@
+---
+ja:
+  smoking_area:
+    index:
+      title: 喫煙所一覧
+    new:
+      title: 喫煙所登録
+      reset: リセット

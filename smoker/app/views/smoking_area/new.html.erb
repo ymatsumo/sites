@@ -1,4 +1,4 @@
-<h2>喫煙所登録</h2>
+<h2><%= t ".title" %></h2>
 
 <% if @smoking_area.errors.any? %>
   <div class="alert alert-dismissible alert-danger">
@@ -15,33 +15,33 @@
   <%= form_for @smoking_area, :url => {action: "create"}, :html => {class: "form-horizontal"} do |f| %>
     <fieldset>
       <div class="form-group">
-        <%= f.label :name, "喫煙所名", :class => "col-lg-2 control-label" %>
+        <%= f.label :name, :class => "col-lg-2 control-label" %>
         <div class="col-lg-10">
           <%= f.text_field :name, :class => "form-control" %>
         </div>
       </div>
       <div class="form-group">
-        <%= f.label :address, "住所", :class => "col-lg-2 control-label" %>
+        <%= f.label :address, :class => "col-lg-2 control-label" %>
         <div class="col-lg-10">
           <%= f.text_field :address, :class => "form-control" %>
         </div>
       </div>
       <div class="form-group">
-        <%= f.label :latitude, "緯度", :class => "col-lg-2 control-label" %>
+        <%= f.label :latitude, :class => "col-lg-2 control-label" %>
         <div class="col-lg-10">
           <%= f.text_field :latitude, :class => "form-control" %>
         </div>
       </div>
       <div class="form-group">
-        <%= f.label :longitude, "経度", :class => "col-lg-2 control-label" %>
+        <%= f.label :longitude, :class => "col-lg-2 control-label" %>
         <div class="col-lg-10">
           <%= f.text_field :longitude, :class => "form-control" %>
         </div>
       </div>
       <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">
-          <%= f.button "リセット", :type => "reset", :class => "btn btn-default" %>
-          <%= f.submit "登録", :class => "btn btn-primary" %>
+          <%= f.button t(".reset"), :type => "reset", :class => "btn btn-default" %>
+          <%= f.submit :class => "btn btn-primary" %>
         </div>
       </div>
     </fieldset>

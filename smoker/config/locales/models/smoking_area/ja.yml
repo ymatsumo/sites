@@ -1,0 +1,11 @@
+---
+ja:
+  activerecord:
+    models:
+      smoking_area: 喫煙所
+    attributes:
+      smoking_area:
+        name: 喫煙所名
+        address: 住所
+        latitude: 緯度
+        longitude: 経度

@@ -1,14 +1,14 @@
-<h2>喫煙所一覧</h2>
+<h2><%= t ".title" %></h2>
 
 <%= render 'googlemap' %>
 
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th>喫煙所名</th>
-      <th>住所</th>
-      <th>緯度</th>
-      <th>経度</th>
+      <th><%= t "activerecord.attributes.smoking_area.name" %></th>
+      <th><%= t "activerecord.attributes.smoking_area.address" %></th>
+      <th><%= t "activerecord.attributes.smoking_area.latitude" %></th>
+      <th><%= t "activerecord.attributes.smoking_area.longitude" %></th>
     </tr>
   </thead>
 
