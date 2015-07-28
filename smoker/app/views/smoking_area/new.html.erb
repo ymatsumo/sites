@@ -40,8 +40,13 @@
       </div>
       <div class="form-group">
         <div class="col-lg-10 col-lg-offset-2">
+          <%= link_to t(".get_locale"), {action: "locale"}, remote: true, :class => "btn btn-warning" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
           <%= f.button t(".reset"), :type => "reset", :class => "btn btn-default" %>
-          <%= f.submit :class => "btn btn-primary" %>
+          <%= f.button :type => "submit", :class => "btn btn-primary" %>
         </div>
       </div>
     </fieldset>

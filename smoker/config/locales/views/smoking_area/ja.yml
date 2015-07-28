@@ -5,4 +5,5 @@ ja:
       title: 喫煙所一覧
     new:
       title: 喫煙所登録
+      get_locale: 現在地を取得
       reset: リセット

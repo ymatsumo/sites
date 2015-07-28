@@ -1,0 +1,12 @@
+$(function(){
+  navigator.geolocation.getCurrentPosition(
+    function(position){
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+      latitude = Math.floor(latitude * 1000000) / 1000000;
+      longitude = Math.floor(longitude * 1000000) / 1000000;
+      $('#smoking_area_latitude').val(latitude);
+      $('#smoking_area_longitude').val(longitude);
+    }
+  );
+});

@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   get "service/about"
   get "service/contact"
-  resources :smoking_area, only: [:index, :new, :create]
+  resources :smoking_area do
+    collection do
+      get :locale
+    end
+  end
 end
