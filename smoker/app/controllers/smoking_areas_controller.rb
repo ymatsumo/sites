@@ -10,6 +10,14 @@ class SmokingAreasController < ApplicationController
     end
   end
 
+  def list
+    @smoking_areas = SmokingArea.all
+  end
+
+  def show
+    @smoking_area = SmokingArea.find(params[:id])
+  end
+
   def new
     @smoking_area = SmokingArea.new
   end
@@ -22,6 +30,25 @@ class SmokingAreasController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
+    @smoking_area = SmokingArea.find(params[:id])
+  end
+
+  def update
+    @smoking_area = SmokingArea.find(params[:id])
+    if @smoking_area.update(smoking_area_params)
+      redirect_to smoking_area_url(@smoking_area)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @smoking_area = SmokingArea.find(params[:id])
+    @smoking_area.destroy
+    redirect_to :smoking_areas
   end
 
   private

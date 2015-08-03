@@ -1,9 +1,17 @@
 ---
 ja:
   smoking_areas:
+    list:
+      title: 喫煙所一覧
+      edit: 編集
+      destroy: 削除
+      confirm: 削除してよろしいですか？
     show:
       title: 喫煙所詳細
     new:
       title: 喫煙所登録
+    edit:
+      title: 喫煙所編集
+    form:
       get_locale: 現在地を取得
       reset: リセット

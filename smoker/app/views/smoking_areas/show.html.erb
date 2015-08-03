@@ -1,0 +1,21 @@
+<h2><%= t ".title" %></h2>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th><%= t "activerecord.attributes.smoking_area.name" %></th>
+      <th><%= t "activerecord.attributes.smoking_area.address" %></th>
+      <th><%= t "activerecord.attributes.smoking_area.latitude" %></th>
+      <th><%= t "activerecord.attributes.smoking_area.longitude" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @smoking_area.name %></td>
+      <td><%= @smoking_area.address%></td>
+      <td><%= @smoking_area.latitude %></td>
+      <td><%= @smoking_area.longitude %></td>
+    </tr>
+  </tbody>
+</table>

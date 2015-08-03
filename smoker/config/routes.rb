@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "service/contact"
   resources :smoking_areas do
     collection do
+      get :list
       get :locale
     end
   end
