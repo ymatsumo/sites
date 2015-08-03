@@ -1,8 +1,8 @@
 ---
 ja:
-  smoking_area:
-    index:
-      title: 喫煙所一覧
+  smoking_areas:
+    show:
+      title: 喫煙所詳細
     new:
       title: 喫煙所登録
       get_locale: 現在地を取得

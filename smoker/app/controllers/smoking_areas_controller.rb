@@ -1,4 +1,4 @@
-class SmokingAreaController < ApplicationController
+class SmokingAreasController < ApplicationController
   def index
     @smoking_areas = SmokingArea.all
 
